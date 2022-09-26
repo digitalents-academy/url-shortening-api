@@ -4,29 +4,35 @@ body {
 }
 
 .main-image {
-
-       clip-path: inset(0px 100px 0px 0px);
+    clip-path: inset(0px 100px 0px 0px);
     margin-right: -50%;
 }
 
-.navbar{
-    margin:0;
+.navbar {
+    margin: 0;
     padding: 10px 10px;
     height: 60px;
-    display:flex;
+    display: flex;
     justify-content: space-between;
-    align-items:center;
+    align-items: center;
 }
+
 .navbar img{
     height: 20px;
-    
 }
 
+.link-input-section {
+    margin-right: 20px;
+    margin-left: 20px;
+    height: 150px;
+    border-radius: 10px;
+
+    background-color: hsl(257, 27%, 26%);
+    background-image: url(images/bg-boost-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: ;
+}
 
 .attribution{
-    bottom:10%;
-
-
- 
-
+    bottom: 10%;
 }
