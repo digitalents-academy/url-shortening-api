@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-image {
+    clip-path: inset(100px 50px);
+}
+
+.navbar{
+    margin:0;
+    padding: 10px 10px;
+    height: 60px;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+}
+.navbar img{
+    height: 20px;
+    
+}
+
+
+.attribution{
+    bottom:10%;
+
+}
