@@ -1,0 +1,8 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-image {
+    clip-path: inset(100px 50px);
+}
