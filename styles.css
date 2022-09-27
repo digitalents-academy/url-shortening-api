@@ -106,6 +106,21 @@ body {
     font-size: 15px;
 }
 
+.advanced-statistics {
+    margin-top: 50px;
+    text-align: center;
+    padding: 0 35px;
+}
+
+.advanced-statistics h1 {
+    font-size: 22px;
+}
+
+.advanced-statistics p {
+    color: hsl(257, 7%, 63%);
+    font-weight: 400;
+}
+
 .attribution{
     bottom: 10%;
     font-size: small;
