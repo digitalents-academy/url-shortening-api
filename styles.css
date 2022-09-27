@@ -5,6 +5,8 @@
 body {
     display: flex;
     flex-direction: column;
+    text-align: center;
+    margin: 0;
 
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
@@ -29,44 +31,41 @@ body {
 }
 
 .header-text-section {
-     justify-content: center;
-     align-items: center;
-     text-align: center;
-     margin-top: 20px;
-     margin-bottom:20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .header-text-section h1 {
     justify-content: center;
     align-items: center;
-    padding:0 40px ;
-    font-weight:700;
+    padding: 0 40px ;
+    font-weight: 700;
 
 }
 .header-text-section p {
     justify-content: center;
     align-items: center;
-    padding:0 35px ;
-    color:  hsl(257, 7%, 63%);
-   font-weight:400;
+    padding: 0 35px ;
+    color: hsl(257, 7%, 63%);
+    font-weight: 400;
 }
 
 .header-text-section button {
- margin-top:25px;
- margin-bottom:25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
     background-color: hsl(180, 66%, 49%); 
     border: none;
     color: white;
     border-radius: 25px;
     padding: 16px 23px 13px;
-    text-align: center;
     text-decoration: none;
     font-size: 16px;
     font-family: poppins;
-    font-weight:400;
+    font-weight: 400;
     text-transform: uppercase;
-    cursor:pointer;
-
+    cursor: pointer;
 }
 
 .link-input-section {
@@ -76,11 +75,10 @@ body {
     height: 90px;
     border-radius: 10px;
 
-
     background-color: hsl(257, 27%, 26%);
     background-image: url(images/bg-boost-mobile.svg);
     background-repeat: no-repeat;
-    background-position: -150% 0%;
+    background-position: top right -120px;
 
     display: flex;
     flex-direction: column;
@@ -102,13 +100,13 @@ body {
     padding: 8px 20px;
     background-color: hsl(180, 66%, 49%);
     color: white;
+    font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 15px;
 }
 
 .advanced-statistics {
     margin-top: 50px;
-    text-align: center;
     padding: 0 35px;
 }
 
@@ -119,6 +117,36 @@ body {
 .advanced-statistics p {
     color: hsl(257, 7%, 63%);
     font-weight: 400;
+}
+
+/* Three boxes here */
+
+.boost-your-links {
+    margin: 0;
+    height: 220px;
+    width: 100%;
+    padding-top: 80px;
+
+    color: white;
+    font-size: 13px;
+
+    background-color: hsl(257, 27%, 26%);
+    background-image: url(images/bg-boost-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+
+}
+
+.boost-your-links button {
+    padding: 14px 40px;
+    background-color: hsl(180, 66%, 49%); 
+    border: none;
+    border-radius: 35px;
+
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
 }
 
 .attribution{
