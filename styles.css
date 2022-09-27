@@ -42,6 +42,8 @@ body {
     align-items: center;
     padding: 0 40px ;
     font-weight: 700;
+    color: hsl(255, 11%, 22%);
+
 
 }
 .header-text-section p {
@@ -112,6 +114,7 @@ body {
 
 .advanced-statistics h1 {
     font-size: 22px;
+    color: hsl(255, 11%, 22%);
 }
 
 .advanced-statistics p {
@@ -134,7 +137,6 @@ body {
     background-image: url(images/bg-boost-mobile.svg);
     background-repeat: no-repeat;
     background-position: top right;
-
 }
 
 .boost-your-links button {
@@ -147,6 +149,31 @@ body {
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
     font-weight: 700;
+}
+
+footer {
+    padding-top: 30px;
+    background-color: hsl(256, 21%, 17%);
+    color: white;
+}
+
+footer h3 {
+    margin-top: 50px;
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+footer p {
+    margin: 10px;
+    color: hsl(0, 0%, 75%);
+}
+
+footer .social-media-icons {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
 }
 
 .attribution{
