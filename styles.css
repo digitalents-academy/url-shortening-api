@@ -1,3 +1,4 @@
+
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
 
@@ -27,12 +28,54 @@ body {
     height: 20px;
 }
 
+.header-text-section {
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     margin-top: 20px;
+     margin-bottom:20px;
+}
+
+.header-text-section h1 {
+    justify-content: center;
+    align-items: center;
+    padding:0 40px ;
+    font-weight:700;
+
+}
+.header-text-section p {
+    justify-content: center;
+    align-items: center;
+    padding:0 35px ;
+    color:  hsl(257, 7%, 63%);
+   font-weight:400;
+}
+
+.header-text-section button {
+ margin-top:25px;
+ margin-bottom:25px;
+    background-color: hsl(180, 66%, 49%); 
+    border: none;
+    color: white;
+    border-radius: 25px;
+    padding: 16px 23px 13px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: poppins;
+    font-weight:400;
+    text-transform: uppercase;
+    cursor:pointer;
+
+}
+
 .link-input-section {
     padding: 20px;
     margin-right: 20px;
     margin-left: 20px;
     height: 90px;
     border-radius: 10px;
+
 
     background-color: hsl(257, 27%, 26%);
     background-image: url(images/bg-boost-mobile.svg);
