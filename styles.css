@@ -7,7 +7,6 @@ body {
     flex-direction: column;
     text-align: center;
     margin: 0;
-
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
 }
@@ -46,6 +45,7 @@ body {
 
 
 }
+
 .header-text-section p {
     justify-content: center;
     align-items: center;
@@ -110,6 +110,7 @@ body {
 .advanced-statistics {
     margin-top: 50px;
     padding: 0 35px;
+    background-color: rgb(240, 240, 240);
 }
 
 .advanced-statistics h1 {
@@ -123,6 +124,55 @@ body {
 }
 
 /* Three boxes here */
+
+.three-boxes{
+    padding-top: 60px;
+    background-color: rgb(240, 240, 240);
+}
+
+.three-boxes h3{
+  font-weight:700;
+  color:black;
+}
+
+.three-boxes p{
+  color:hsl(0, 0%, 75%);
+}
+ .box1, .box2, .box3{
+
+height:220px;
+width:320px;
+border-radius:5px;
+background-color: white;
+margin: 0 40px 0 20px;
+padding:10px 10px ;
+margin-bottom: 90px;
+
+}
+
+.circle{
+  
+    margin-top: -1200px;
+    display: flex;
+    border-radius: 50%;
+    background-color: hsl(257, 27%, 26%);
+    align-content: center;
+    padding: 20px;
+}
+
+.box1 img , .box2 img , .box3 img {
+    height: 35px;
+    width: 35px;
+  }
+  
+  hr {
+  
+    margin-top: -110px;
+    height: 80px;
+    width: 8px;
+    border: none;
+    background-color: hsl(180, 66%, 49%);
+  }
 
 .boost-your-links {
     margin: 0;
@@ -151,6 +201,30 @@ body {
     font-weight: 700;
 }
 
+
+.circle {
+  margin-top: -1200px;
+  display: inline-flex;
+  border-radius: 50%;
+  background-color: hsl(257, 27%, 26%);
+  align-content: center;
+  padding: 20px;
+}
+
+.box1 img {
+  height: 35px;
+  width: 35px;
+}
+
+hr {
+    
+    margin-top: -100px;
+    height: 80px;
+    width: 8px;
+    border: none;
+    background-color: hsl(180, 66%, 49%);
+}
+
 footer {
     padding-top: 30px;
     background-color: hsl(256, 21%, 17%);
@@ -174,9 +248,4 @@ footer .social-media-icons {
     display: flex;
     justify-content: center;
     gap: 25px;
-}
-
-.attribution{
-    bottom: 10%;
-    font-size: small;
 }
