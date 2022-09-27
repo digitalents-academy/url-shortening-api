@@ -1,99 +1,206 @@
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&family=Poppins:wght@500;700&display=swap");
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
 
 body {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  background-color: rgba(177, 177, 177, 0.12);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
 }
 
 .main-image {
-  clip-path: inset(0px 100px 0px 0px);
-  margin-right: -50%;
+    clip-path: inset(0px 100px 0px 0px);
+    margin-right: -50%;
 }
 
 .navbar {
-  margin: 0;
-  padding: 10px 10px;
-  height: 60px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    margin: 0;
+    padding: 10px 10px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.navbar img {
-  height: 20px;
+
+.navbar img{
+    height: 20px;
 }
 
 .header-text-section {
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .header-text-section h1 {
-  justify-content: center;
-  align-items: center;
-  padding: 0 40px;
-  font-weight: 700;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px ;
+    font-weight: 700;
+    color: hsl(255, 11%, 22%);
+
+
 }
 
 .header-text-section p {
-  justify-content: center;
-  align-items: center;
-  padding: 0 35px;
-  color: hsl(257, 7%, 63%);
-  font-family: poppins;
-  font-weight: 400;
+    justify-content: center;
+    align-items: center;
+    padding: 0 35px ;
+    color: hsl(257, 7%, 63%);
+    font-weight: 400;
 }
 
 .header-text-section button {
-  margin-top: 25px;
-  margin-bottom: 25px;
-  background-color: hsl(180, 66%, 49%);
-  border: none;
-  color: white;
-  border-radius: 25px;
-  padding: 16px 23px 13px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 400;
-  text-transform: uppercase;
-  cursor: pointer;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background-color: hsl(180, 66%, 49%); 
+    border: none;
+    color: white;
+    border-radius: 25px;
+    padding: 16px 23px 13px;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: poppins;
+    font-weight: 400;
+    text-transform: uppercase;
+    cursor: pointer;
 }
 
-.three-boxes {
-  align-content: center;  
-  margin-top: 40px;
-  font-family: poppins;
+.link-input-section {
+    padding: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    height: 90px;
+    border-radius: 10px;
+
+    background-color: hsl(257, 27%, 26%);
+    background-image: url(images/bg-boost-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: top right -120px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 14px;
+}
+
+.link-input-section input {
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+}
+
+.link-input-section input[type=text] {
+    padding: 5px 20px;
+}
+
+.link-input-section input[type=submit] {
+    padding: 8px 20px;
+    background-color: hsl(180, 66%, 49%);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.advanced-statistics {
+    margin-top: 50px;
+    padding: 0 35px;
+    background-color: rgb(240, 240, 240);
+}
+
+.advanced-statistics h1 {
+    font-size: 22px;
+    color: hsl(255, 11%, 22%);
+}
+
+.advanced-statistics p {
+    color: hsl(257, 7%, 63%);
+    font-weight: 400;
+}
+
+/* Three boxes here */
+
+.three-boxes{
+    padding-top: 60px;
+    background-color: rgb(240, 240, 240);
+}
+
+.three-boxes h3{
+  font-weight:700;
+  color:black;
+}
+
+.three-boxes p{
+  color:hsl(0, 0%, 75%);
+}
+ .box1, .box2, .box3{
+
+height:220px;
+width:320px;
+border-radius:5px;
+background-color: white;
+margin: 0 40px 0 20px;
+padding:10px 10px ;
+margin-bottom: 90px;
+
+}
+
+.circle{
   
-}
-.three-boxes h3 {
-  font-weight: 700;
-  margin-top: 20px;
-}
-
-.three-boxes p {
-  font-size: 14px;
-  color: hsl(0, 0%, 75%);
-  margin-bottom: 10px;
+    margin-top: -1200px;
+    display: flex;
+    border-radius: 50%;
+    background-color: hsl(257, 27%, 26%);
+    align-content: center;
+    padding: 20px;
 }
 
-.box1,
-.box2,
-.box3 {
- 
-  flex-direction: column;
-  height: 240px;
-  width: 320px;
-  padding: 10px 10px;
-  align-content: center;
-  background-color: white;
-  margin: 0 40px 0 40px;
-  margin-bottom: 90px;
+.box1 img , .box2 img , .box3 img {
+    height: 35px;
+    width: 35px;
+  }
+  
+  hr {
+  
+    margin-top: -110px;
+    height: 80px;
+    width: 8px;
+    border: none;
+    background-color: hsl(180, 66%, 49%);
+  }
+
+.boost-your-links {
+    margin: 0;
+    height: 220px;
+    width: 100%;
+    padding-top: 80px;
+
+    color: white;
+    font-size: 13px;
+
+    background-color: hsl(257, 27%, 26%);
+    background-image: url(images/bg-boost-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
 }
+
+.boost-your-links button {
+    padding: 14px 40px;
+    background-color: hsl(180, 66%, 49%); 
+    border: none;
+    border-radius: 35px;
+
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+
 
 .circle {
   margin-top: -1200px;
@@ -110,10 +217,35 @@ body {
 }
 
 hr {
+    
+    margin-top: -100px;
+    height: 80px;
+    width: 8px;
+    border: none;
+    background-color: hsl(180, 66%, 49%);
+}
 
-  margin-top: -100px;
-  height: 80px;
-  width: 8px;
-  border: none;
-  background-color: hsl(180, 66%, 49%);
+footer {
+    padding-top: 30px;
+    background-color: hsl(256, 21%, 17%);
+    color: white;
+}
+
+footer h3 {
+    margin-top: 50px;
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+footer p {
+    margin: 10px;
+    color: hsl(0, 0%, 75%);
+}
+
+footer .social-media-icons {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
 }
