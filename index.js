@@ -15,3 +15,10 @@
           document.getElementById('hide-image').style.visibility='visible';
         }
       }
+
+  
+    document.querySelector('.link-input-section').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const formData = new FormData(e.target);
+        console.log(formData.get('long-link'));
+    });
