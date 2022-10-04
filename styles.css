@@ -154,6 +154,15 @@ background-color: hsl(0, 0%, 75%);
     font-size: 15px;
 }
 
+input[type=submit]:active{
+    transform:scale(0.98);
+}
+
+input:focus{
+   outline:none;
+}
+
+
 
 
 .input-section h5{
