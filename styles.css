@@ -1,4 +1,3 @@
-
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
 
@@ -25,34 +24,31 @@ body {
     align-items: center;
 }
 
-.navbar img{
+.navbar img {
     height: 20px;
 }
 
-.nav-dropdown{
-display:none;
-/* height:120%; */
-border-radius: 10px;
-background-color:hsl(257, 27%, 26%) ;
-margin: 0 40px 0 40px ;
-padding: 20px 20px ;
-color:white;
-margin-bottom: -421px;
-
+.nav-dropdown {
+    display:none;
+    border-radius: 10px;
+    background-color:hsl(257, 27%, 26%) ;
+    margin: 0 40px 0 40px ;
+    padding: 20px 20px ;
+    color:white;
+    margin-bottom: -421px;
 }
 
-.nav-dropdown h2{
-height:0.15px;
-margin: 0 5px 0 5px;
-background-color: hsl(0, 0%, 75%);
+.nav-dropdown h2 {
+    height:0.15px;
+    margin: 0 5px 0 5px;
+    background-color: hsl(0, 0%, 75%);
 }
+
 .nav-dropdown h3 {
     padding: 6px;
-  }
+}
 
-
-.nav-dropdown button{
-    
+.nav-dropdown button {
     margin-top: 25px;
     margin-bottom: 25px;
     background-color: hsl(180, 66%, 49%); 
@@ -68,7 +64,6 @@ background-color: hsl(0, 0%, 75%);
     font-weight: 700;
     font-size: 15px;
     cursor: pointer;
-
 }
 
 .header-text-section {
@@ -84,8 +79,6 @@ background-color: hsl(0, 0%, 75%);
     padding: 0 40px ;
     font-weight: 700;
     color: hsl(255, 11%, 22%);
-
-
 }
 
 .header-text-section p {
@@ -111,9 +104,6 @@ background-color: hsl(0, 0%, 75%);
     cursor: pointer;
 }
 
-
-
-
 .link-input-section {
     padding: 20px;
     margin-right: 20px;
@@ -138,7 +128,6 @@ background-color: hsl(0, 0%, 75%);
     height: 50px;
     border: none;
     border-radius: 5px;
-   
 }
 
 .link-input-section input[type=text] {
@@ -154,51 +143,11 @@ background-color: hsl(0, 0%, 75%);
     font-size: 15px;
 }
 
-
-
-.input-section h5{
-    height:0.15px;
-    margin: 0 5px 0 5px;
-    background-color: hsl(0, 0%, 75%);
-    }
-
-    .input-section {
-        padding: 20px;
-        margin-right: 20px;
-        margin-left: 20px;
-        margin-bottom:-200px;
-        z-index: 2;
-        height: 90px;
-        border-radius: 10px;
-    
-        background-color: hsl(240, 14%, 99%);
-       
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 34px;
-    }
-    
-    .input-section input {
-        height: 50px;
-        border: none;
-        border-radius: 5px;
-       
-    }
-    
-    .input-section p {
-        padding: 5px 5px; 
-    }
-    
-    .input-section input[type=submit] {
-        padding: 8px 20px;
-        background-color: hsl(180, 66%, 49%);
-        color: white;
-        font-family: 'Poppins', sans-serif;
-        font-weight: 700;
-        font-size: 15px;
-    }
-    
+/* Style this next! */
+.links {
+    margin-top: 100px;
+    height: auto;
+}
 
 .advanced-statistics {
     padding: 0 35px;
@@ -217,56 +166,49 @@ background-color: hsl(0, 0%, 75%);
     font-weight: 400;
 }
 
-/* Three boxes here */
-
 .three-boxes{
     padding-top: 60px;
     background-color: rgb(240, 240, 240);
 }
 
 .three-boxes h3{
-  font-weight:700;
-  color:black;
+    font-weight:700;
+    color:black;
 }
 
 .three-boxes p{
-  color:hsl(0, 0%, 75%);
-}
- .box1, .box2, .box3{
-
-/* height:80%;
-width:90%; */
-border-radius:5px;
-background-color: white;
-margin: 0 40px 0 40px;
-padding:10px 10px ;
-margin-bottom: 90px;
-
+    color:hsl(0, 0%, 75%);
 }
 
-.circle{
-  
+.box1, .box2, .box3 {
+    border-radius:5px;
+    background-color: white;
+    margin: 0 40px 0 40px;
+    padding:10px 10px ;
+    margin-bottom: 90px;
+}
+
+.box1 img , .box2 img , .box3 img {
+    height: 35px;
+    width: 35px;
+}
+
+.circle {
     margin-top: -1200px;
-    display: flex;
+    display: inline-flex;
     border-radius: 50%;
     background-color: hsl(257, 27%, 26%);
     align-content: center;
     padding: 20px;
 }
 
-.box1 img , .box2 img , .box3 img {
-    height: 35px;
-    width: 35px;
-  }
-  
-  hr {
-  
-    margin-top: -110px;
+hr {
+    margin-top: -100px;
     height: 80px;
     width: 8px;
     border: none;
     background-color: hsl(180, 66%, 49%);
-  }
+}
 
 .boost-your-links {
     margin: 0;
@@ -293,30 +235,6 @@ margin-bottom: 90px;
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
     font-weight: 700;
-}
-
-
-.circle {
-  margin-top: -1200px;
-  display: inline-flex;
-  border-radius: 50%;
-  background-color: hsl(257, 27%, 26%);
-  align-content: center;
-  padding: 20px;
-}
-
-.box1 img {
-  height: 35px;
-  width: 35px;
-}
-
-hr {
-    
-    margin-top: -100px;
-    height: 80px;
-    width: 8px;
-    border: none;
-    background-color: hsl(180, 66%, 49%);
 }
 
 footer {
