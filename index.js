@@ -11,33 +11,35 @@ function showNav() {
   }
 }
 
-document.querySelector('.link-input-section').addEventListener('submit', (e) => {
+const linkSearch = document.getElementById('link-search');
+
+linkSearch.addEventListener('submit', function (e) { 
     e.preventDefault();
-    const formData = new FormData(e.target);
-    let longLink = formData.get('long-link');
-});
-
-// Next: send long link to API and retrieve short link
-
-
-
-
-
-const Link_search = document.getElementById('link-search');
-
-Link_search.addEventListener('submit', function (e) { 
-    e.preventDefault();
-
-    const Formdata = new FormData(this);
-
-    fetch (' https://api.shrtco.de/v2/shorten?url=example.org/very/long/link.html'
     
-) .then(function (response) { 
-    return response.text(); 
-})  .then(function (text) { 
-    console.log (text); 
-})    .catch(function (error) { 
-   console.error(error); 
-})
+    const formData = new FormData(this);
+    longLink = formData.get('long-link')
+    const linksContainer = document.querySelector('.links')
+
+    fetch ('https://api.shrtco.de/v2/shorten?url=' + longLink) 
+    .then(function (response) { 
+        return response.json(); 
+    })  
     
+    .then(function(text) { 
+        const newDiv = document.createElement("div");
+        const longLinkDisplay = document.createElement("p");
+        const shortLinkDisplay = document.createElement("p");
+        const copyButton = document.createElement("button");
+
+        longLinkDisplay.innerText = longLink;
+        shortLinkDisplay.innerText = text.result.short_link;
+        copyButton.innerText = 'copy';
+
+        newDiv.append(longLinkDisplay, shortLinkDisplay, copyButton);
+        linksContainer.append(newDiv);
+    }) 
+
+    .catch(function (error) { 
+        console.error(error); 
+    })
 })
