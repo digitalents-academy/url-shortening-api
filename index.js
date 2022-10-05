@@ -21,25 +21,37 @@ linkSearch.addEventListener('submit', function (e) {
     const linksContainer = document.querySelector('.links')
 
     fetch ('https://api.shrtco.de/v2/shorten?url=' + longLink) 
-    .then(function (response) { 
+    .then(function(response) { 
         return response.json(); 
     })  
-    
     .then(function(text) { 
         const newDiv = document.createElement("div");
         const longLinkDisplay = document.createElement("p");
-        const shortLinkDisplay = document.createElement("p");
-        const copyButton = document.createElement("button");
+        longLinkDisplay.setAttribute('class', 'long-link');
 
+        const shortLinkDisplay = document.createElement("p");
+        shortLinkDisplay.setAttribute('class', 'short-link');
+
+        const copyButton = document.createElement("button");
+        copyButton.setAttribute('class', 'copy-button');
+        copyButton.setAttribute('onclick', 'copyToClipboard()');
+
+        
         longLinkDisplay.innerText = longLink;
         shortLinkDisplay.innerText = text.result.short_link;
-        copyButton.innerText = 'copy';
-
+        copyButton.innerText = 'Copy';
+        
         newDiv.append(longLinkDisplay, shortLinkDisplay, copyButton);
         linksContainer.append(newDiv);
+        
     }) 
-
-    .catch(function (error) { 
+    
+    .catch(function(error) { 
         console.error(error); 
     })
+    
 })
+
+function copyToClipboard() {
+    alert('clicked')
+}
