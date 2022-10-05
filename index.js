@@ -12,25 +12,36 @@ function showNav() {
 }
 
 
-const Link_search = document.getElementById('link-search');
+const linkSearch = document.getElementById('link-search');
 
-Link_search.addEventListener('submit', function (e) { 
+linkSearch.addEventListener('submit', function (e) { 
     e.preventDefault();
-
-const Formdata = new FormData(this);
-const url =   document.getElementById('long-link').value
-
-console.log(url)
-fetch (' https://api.shrtco.de/v2/shorten?url=' + url
     
-) .then(function (response) { 
-    return response.json(); 
-})  .then(function (text) { 
-    // console.log (text.result.short_link); 
-    const Link_search =  document.createTextNode ('text.result.short_link')
+    const formData = new FormData(this);
+    longLink = formData.get('long-link')
+    const linksContainer = document.querySelector('.links')
 
-})    .catch(function (error) { 
-   console.error(error); 
-})
+    fetch ('https://api.shrtco.de/v2/shorten?url=' + longLink) 
+    .then(function (response) { 
+        return response.json(); 
+    })  
+
     
+    .then(function(text) { 
+        const newDiv = document.createElement("div");
+        const longLinkDisplay = document.createElement("p");
+        const shortLinkDisplay = document.createElement("p");
+        const copyButton = document.createElement("button");
+
+        longLinkDisplay.innerText = longLink;
+        shortLinkDisplay.innerText = text.result.short_link;
+        copyButton.innerText = 'copy';
+
+        newDiv.append(longLinkDisplay, shortLinkDisplay, copyButton);
+        linksContainer.append(newDiv);
+    }) 
+
+    .catch(function (error) { 
+        console.error(error); 
+    })
 })
