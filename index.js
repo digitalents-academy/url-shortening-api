@@ -11,31 +11,24 @@ function showNav() {
   }
 }
 
-document.querySelector('.link-input-section').addEventListener('submit', (e) => {
-    e.preventDefault();
-    const formData = new FormData(e.target);
-    let longLink = formData.get('long-link');
-});
-
-// Next: send long link to API and retrieve short link
-
-
-
-
 
 const Link_search = document.getElementById('link-search');
 
 Link_search.addEventListener('submit', function (e) { 
     e.preventDefault();
 
-    const Formdata = new FormData(this);
+const Formdata = new FormData(this);
+const url =   document.getElementById('long-link').value
 
-    fetch (' https://api.shrtco.de/v2/shorten?url=example.org/very/long/link.html'
+console.log(url)
+fetch (' https://api.shrtco.de/v2/shorten?url=' + url
     
 ) .then(function (response) { 
-    return response.text(); 
+    return response.json(); 
 })  .then(function (text) { 
-    console.log (text); 
+    // console.log (text.result.short_link); 
+    const Link_search =  document.createTextNode ('text.result.short_link')
+
 })    .catch(function (error) { 
    console.error(error); 
 })
