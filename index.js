@@ -10,11 +10,3 @@ function showNav() {
     document.getElementById('hide-image').style.visibility='visible';
   }
 }
-
-document.querySelector('.link-input-section').addEventListener('submit', (e) => {
-    e.preventDefault();
-    const formData = new FormData(e.target);
-    let longLink = formData.get('long-link');
-});
-
-// Next: send long link to API and retrieve short link
