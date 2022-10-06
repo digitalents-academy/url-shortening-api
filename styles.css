@@ -143,7 +143,6 @@ body {
     font-size: 15px;
 }
 
-/* Style this next! */
 .links {
     margin-top: 100px;
     height: auto;
@@ -152,7 +151,6 @@ body {
 .advanced-statistics {
     padding: 0 35px;
     background-color: rgb(240, 240, 240);
-    z-index: -2;
 }
 
 .advanced-statistics h1 {

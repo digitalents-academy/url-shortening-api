@@ -1,14 +1,14 @@
 function showNav() {
-  const navDropDown = document.querySelector(".nav-dropdown");
-  document.getElementById('hide-image').style.visibility='hidden';
-  let displayStatus = navDropDown.style.display
-  if (displayStatus === "none" || displayStatus === "") {
-    navDropDown.style.display = "block";
+    const navDropDown = document.querySelector(".nav-dropdown");
     document.getElementById('hide-image').style.visibility='hidden';
-  } else {
-    navDropDown.style.display = "none";
-    document.getElementById('hide-image').style.visibility='visible';
-  }
+    let displayStatus = navDropDown.style.display
+    if (displayStatus === "none" || displayStatus === "") {
+      navDropDown.style.display = "block";
+      document.getElementById('hide-image').style.visibility='hidden';
+    } else {
+      navDropDown.style.display = "none";
+      document.getElementById('hide-image').style.visibility='visible';
+    }
 }
 
 const linkSearch = document.getElementById('link-search');
@@ -34,24 +34,22 @@ linkSearch.addEventListener('submit', function (e) {
 
         const copyButton = document.createElement("button");
         copyButton.setAttribute('class', 'copy-button');
-        copyButton.setAttribute('onclick', 'copyToClipboard()');
 
-        
+        copyButton.addEventListener('click', function copyToClipboard(){
+            let shortLink = text.result.short_link;
+            navigator.clipboard.writeText(shortLink);
+            alert("Copied to the clipboard: " + shortLink);
+        });
+
         longLinkDisplay.innerText = longLink;
         shortLinkDisplay.innerText = text.result.short_link;
         copyButton.innerText = 'Copy';
         
         newDiv.append(longLinkDisplay, shortLinkDisplay, copyButton);
         linksContainer.append(newDiv);
-        
     }) 
     
     .catch(function(error) { 
         console.error(error); 
     })
-    
 })
-
-function copyToClipboard() {
-    alert('clicked')
-}
