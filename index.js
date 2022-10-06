@@ -1,20 +1,19 @@
 function showNav() {
-  const navDropDown = document.querySelector(".nav-dropdown");
-  document.getElementById('hide-image').style.visibility='hidden';
-  let displayStatus = navDropDown.style.display
-  if (displayStatus === "none" || displayStatus === "") {
-    navDropDown.style.display = "block";
+    const navDropDown = document.querySelector(".nav-dropdown");
     document.getElementById('hide-image').style.visibility='hidden';
-  } else {
-    navDropDown.style.display = "none";
-    document.getElementById('hide-image').style.visibility='visible';
-  }
+    let displayStatus = navDropDown.style.display
+    if (displayStatus === "none" || displayStatus === "") {
+      navDropDown.style.display = "block";
+      document.getElementById('hide-image').style.visibility='hidden';
+    } else {
+      navDropDown.style.display = "none";
+      document.getElementById('hide-image').style.visibility='visible';
+    }
 }
 
+const linkSearch = document.getElementById('link-search');
 
-const link_Search = document.getElementById('link-search');
-
-link_Search.addEventListener('submit', function (e) { 
+linkSearch.addEventListener('submit', function (e) { 
     e.preventDefault();
     
     const formData = new FormData(this);
@@ -22,11 +21,9 @@ link_Search.addEventListener('submit', function (e) {
     const linksContainer = document.querySelector('.links')
 
     fetch ('https://api.shrtco.de/v2/shorten?url=' + longLink) 
-    .then(function (response) { 
+    .then(function(response) { 
         return response.json(); 
     })  
-
-    
     .then(function(text) { 
         const newDiv = document.createElement("div");
         newDiv.setAttribute('class', 'link-container');
@@ -36,24 +33,31 @@ link_Search.addEventListener('submit', function (e) {
 
         const shortLinkDisplay = document.createElement("p");
         shortLinkDisplay.setAttribute('class', 'short-link');
-        
+
         const copyButton = document.createElement("button");
         copyButton.setAttribute('class', 'copy-button');
-        
+
+        copyButton.addEventListener('click', function copyToClipboard(){
+            // Copy short link
+            let shortLink = text.result.short_link;
+            navigator.clipboard.writeText(shortLink);
+            
+            // Change button text (Copy -> Copied!)
+            copyButton.innerText = 'Copied!'
+
+            // Change button color
+            copyButton.style.backgroundColor = "hsl(257, 27%, 26%)";
+        });
+
         longLinkDisplay.innerText = longLink;
         shortLinkDisplay.innerText = text.result.short_link;
-        copyButton.innerText = 'copy';
+        copyButton.innerText = 'Copy';
         
         newDiv.append(longLinkDisplay, shortLinkDisplay, copyButton);
         linksContainer.append(newDiv);
     }) 
-
-    .catch(function (error) { 
+    
+    .catch(function(error) { 
         console.error(error); 
     })
 })
-
-
-
-
-
