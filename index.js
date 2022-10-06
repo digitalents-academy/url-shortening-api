@@ -12,9 +12,9 @@ function showNav() {
 }
 
 
-const linkSearch = document.getElementById('link-search');
+const link_Search = document.getElementById('link-search');
 
-linkSearch.addEventListener('submit', function (e) { 
+link_Search.addEventListener('submit', function (e) { 
     e.preventDefault();
     
     const formData = new FormData(this);
@@ -29,14 +29,21 @@ linkSearch.addEventListener('submit', function (e) {
     
     .then(function(text) { 
         const newDiv = document.createElement("div");
-        const longLinkDisplay = document.createElement("p");
-        const shortLinkDisplay = document.createElement("p");
-        const copyButton = document.createElement("button");
+        newDiv.setAttribute('class', 'link-container');
 
+        const longLinkDisplay = document.createElement("p");
+        longLinkDisplay.setAttribute('class', 'long-link');
+
+        const shortLinkDisplay = document.createElement("p");
+        shortLinkDisplay.setAttribute('class', 'short-link');
+        
+        const copyButton = document.createElement("button");
+        copyButton.setAttribute('class', 'copy-button');
+        
         longLinkDisplay.innerText = longLink;
         shortLinkDisplay.innerText = text.result.short_link;
         copyButton.innerText = 'copy';
-
+        
         newDiv.append(longLinkDisplay, shortLinkDisplay, copyButton);
         linksContainer.append(newDiv);
     }) 
@@ -45,3 +52,8 @@ linkSearch.addEventListener('submit', function (e) {
         console.error(error); 
     })
 })
+
+
+
+
+
