@@ -26,6 +26,8 @@ linkSearch.addEventListener('submit', function (e) {
     })  
     .then(function(text) { 
         const newDiv = document.createElement("div");
+        newDiv.setAttribute('class', 'link-container');
+
         const longLinkDisplay = document.createElement("p");
         longLinkDisplay.setAttribute('class', 'long-link');
 
@@ -36,12 +38,15 @@ linkSearch.addEventListener('submit', function (e) {
         copyButton.setAttribute('class', 'copy-button');
 
         copyButton.addEventListener('click', function copyToClipboard(){
-            // Copy 
+            // Copy short link
             let shortLink = text.result.short_link;
             navigator.clipboard.writeText(shortLink);
             
-            // Change button text from copy to copied
+            // Change button text (Copy -> Copied!)
             copyButton.innerText = 'Copied!'
+
+            // Change button color
+            copyButton.style.backgroundColor = "hsl(257, 27%, 26%)";
         });
 
         longLinkDisplay.innerText = longLink;
