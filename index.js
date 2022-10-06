@@ -36,9 +36,12 @@ linkSearch.addEventListener('submit', function (e) {
         copyButton.setAttribute('class', 'copy-button');
 
         copyButton.addEventListener('click', function copyToClipboard(){
+            // Copy 
             let shortLink = text.result.short_link;
             navigator.clipboard.writeText(shortLink);
-            alert("Copied to the clipboard: " + shortLink);
+            
+            // Change button text from copy to copied
+            copyButton.innerText = 'Copied!'
         });
 
         longLinkDisplay.innerText = longLink;
