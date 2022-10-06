@@ -44,7 +44,7 @@ linkSearch.addEventListener('submit', function (e) {
             
             // Change button text (Copy -> Copied!)
             copyButton.innerText = 'Copied!'
-
+            
             // Change button color
             copyButton.style.backgroundColor = "hsl(257, 27%, 26%)";
         });
@@ -60,4 +60,29 @@ linkSearch.addEventListener('submit', function (e) {
     .catch(function(error) { 
         console.error(error); 
     })
+})
+
+// Error handling:
+linkSearch.addEventListener('click', function handleError(e) { 
+    e.preventDefault();
+    
+    const inputField = document.querySelector('.link-input-section input');
+    
+    if (!inputField.validity.valid) {
+        console.log('not valid');
+
+        // 'Please add a link' text under input field
+        const addALink = document.createElement("p");
+        addALink.innerText = 'Please add a link';
+        inputField.after(addALink);
+        // Input field red border
+        inputField.style.border = "3px solid hsl(0, 87%, 67%)";
+        // 'Shorten a link here...' placeholder red
+        inputField.style.setProperty("--c", "hsl(0, 87%, 67%)");
+
+
+    } else {
+        console.log('valid');
+    }
+
 })

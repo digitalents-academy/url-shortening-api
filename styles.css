@@ -110,7 +110,7 @@ body {
     margin-left: 20px;
     margin-bottom:-65px;
     z-index: 2;
-    height: 90px;
+    height: 100px;
     border-radius: 10px;
 
     background-color: hsl(257, 27%, 26%);
@@ -141,6 +141,19 @@ body {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 15px;
+}
+
+.link-input-section input::placeholder {
+    color: var(--c, hsl(0, 0%, 75%));
+}
+
+/* "Please add a link" error message */
+.link-input-section p {
+    margin: -5px 0;
+    color: hsl(0, 87%, 67%);
+    font-size: 11px;
+    font-style: italic;
+    text-align: left;
 }
 
 .links {
@@ -298,4 +311,10 @@ footer .social-media-icons {
     display: flex;
     justify-content: center;
     gap: 25px;
+}
+
+/* Desktop version 1440px */
+@media only screen and (min-width: 900px) {
+
+
 }
