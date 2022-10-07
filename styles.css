@@ -181,9 +181,9 @@ body {
     color:hsl(180, 66%, 49%);
 }
 
-/* Fix: When text changes to "Copied!" button doesn't become wider */
 .copy-button {
-    padding: 9px 127px;
+    padding: 9px 0 9px 0;
+    width: 100%;
     background-color: hsl(180, 66%, 49%);
     border: none;
     border-radius: 7px;
