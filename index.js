@@ -56,14 +56,18 @@ function addData() {
         });
 
         // Add values
-        longLinkDisplay.innerText = longLink;
+        longLinkDisplay.innerText = longLink.slice(0, 30) + '...';
         shortLinkDisplay.innerText = text.result.short_link;
         copyButton.innerText = 'Copy';
         
         // Add to page
         newDiv.append(longLinkDisplay, shortLinkDisplay, copyButton);
         linksContainer.append(newDiv);
+
+        // Clear input field
+        inputField.value = '';
     }) 
+    
     .catch(function(error) { 
         console.error(error); 
     })
@@ -87,7 +91,7 @@ function errorMessage() {
 
 function undoError() {
     if (linkSearch.querySelector('p') !== null) {
-        
+
         // Remove 'Please add a link' text
         linkSearch.querySelector('p').remove();
     
