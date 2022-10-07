@@ -17,6 +17,7 @@ const inputField = document.querySelector('.link-input-section input');
 linkSearch.addEventListener('submit', (e) => {
     e.preventDefault();
     if (inputField.value) {
+        undoError();
         addData();
     } else {
         errorMessage();
@@ -81,5 +82,19 @@ function errorMessage() {
     
         // Placeholder red
         inputField.style.setProperty("--c", "hsl(0, 87%, 67%)");
+    }
+}
+
+function undoError() {
+    if (linkSearch.querySelector('p') !== null) {
+        
+        // Remove 'Please add a link' text
+        linkSearch.querySelector('p').remove();
+    
+        // Remove red border
+        inputField.style.border = "none";
+    
+        // Placeholder grey
+        inputField.style.setProperty("--c", "hsl(0, 0%, 75%)");
     }
 }
