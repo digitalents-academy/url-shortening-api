@@ -379,7 +379,7 @@ footer .social-media-icons {
     display:flex;
     justify-content:end;
     align-items: center;
-    padding-left: 721px;
+    padding-left: 621px;
     gap: 20px;
    
   }
@@ -410,7 +410,7 @@ footer .social-media-icons {
   .header-text-section{
     margin-top: -36%;
     margin-left: 78px;
-    margin-bottom: 75px;
+    margin-bottom: 250px;
     width: 45%;
     height: 40%;
   }
@@ -423,7 +423,8 @@ footer .social-media-icons {
     font-size: 20px;
 }
 .header-text-section button{
-  margin-right: 72%
+  margin-left: -65%;
+ 
 }
   .main-image{
     margin-left: 66%;
