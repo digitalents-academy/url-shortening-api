@@ -218,7 +218,7 @@ body {
 .advanced-statistics {
   padding: 0 35px;
   background-color: rgb(240, 240, 240);
-
+}
 
 .advanced-statistics h1 {
   font-size: 22px;
@@ -351,7 +351,8 @@ footer .social-media-icons {
 .navbar img {
     height: 30px;
     gap: 40px;
-    padding: 80px;
+    padding-left: 111px;
+    padding-right: 90px;
 }
 
   .nav-bar {
@@ -378,7 +379,7 @@ footer .social-media-icons {
     display:flex;
     justify-content:end;
     align-items: center;
-    padding-left: 511px;
+    padding-left: 721px;
     gap: 20px;
    
   }
@@ -422,7 +423,7 @@ footer .social-media-icons {
     font-size: 20px;
 }
 .header-text-section button{
-    margin-right: 65%;
+  margin-right: 72%
 }
   .main-image{
     margin-left: 66%;
