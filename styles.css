@@ -110,6 +110,7 @@ body {
 }
 
 .link-input-section {
+
   padding: 20px;
   margin-right: 20px;
   margin-left: 20px;
@@ -117,6 +118,12 @@ body {
   z-index: 2;
   height: 90px;
   border-radius: 10px;
+
+    background-color: hsl(257, 27%, 26%);
+    background-image: url(images/bg-boost-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: top right -120px;
+
 
   background-color: hsl(257, 27%, 26%);
   background-image: url(images/bg-boost-mobile.svg);
@@ -148,7 +155,21 @@ body {
   font-size: 15px;
 }
 
+.link-input-section input::placeholder {
+    color: var(--c, hsl(0, 0%, 75%));
+}
+
+/* "Please add a link" error message */
+.link-input-section p {
+    margin: -5px 0;
+    color: hsl(0, 87%, 67%);
+    font-size: 11px;
+    font-style: italic;
+    text-align: left;
+}
+
 .links {
+
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -197,7 +218,7 @@ body {
 .advanced-statistics {
   padding: 0 35px;
   background-color: rgb(240, 240, 240);
-}
+
 
 .advanced-statistics h1 {
   font-size: 22px;
@@ -319,7 +340,6 @@ footer .social-media-icons {
   .navbar {
     margin: 0;
     padding:0;
-    /* padding: 40px 120px; */
     height: 80px;
     display: flex;
     justify-content: flex-start;
@@ -550,5 +570,7 @@ footer .social-media-icons {
   footer .social-media-icons {
     margin-top: -62px;
     gap: 25px;
+
   }
 }
+
