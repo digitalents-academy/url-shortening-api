@@ -368,13 +368,18 @@ footer .social-media-icons {
    
     padding-left: 20px;
   }
+
+  .nav-bar h3:hover, .nav-bar h4:hover {
+    color:black;
+  }
   .nav-bar h4{
     color: hsl(0, 0%, 75%);
     font-size:19px;
     align-items: center;
-   
-    
   }
+
+
+  
   .sign-up{
     display:flex;
     justify-content:end;
@@ -396,6 +401,9 @@ footer .social-media-icons {
     height:60px;
     text-transform: uppercase;
     cursor: pointer;
+  }
+  button:hover {
+    opacity: 50%;
   }
 
   .nav-bar h3 {
@@ -545,6 +553,17 @@ footer .social-media-icons {
     align-items: center;
   }
 
+  .footer:hover{
+    color:hsl(180, 66%, 49%);
+  }
+
+  .footer:hover::before {
+  
+}
+.footer:hover::after {
+  color:hsl(180, 66%, 49%);
+  }
+
   .footer-links {
     justify-content: flex-start;
     align-self: flex-start;
@@ -569,10 +588,21 @@ footer .social-media-icons {
     text-align: left;
   }
 
+
+
   footer .social-media-icons {
     margin-top: -62px;
     gap: 25px;
 
   }
+
+ 
+   footer p:hover, .social-media-icons:hover,  footer h3:hover {
+    color:hsl(180, 66%, 49%);
+  }
+  
+  /* .social-media-icons:hover {
+   color: hsl(180, 66%, 49%); */
+
 }
 
