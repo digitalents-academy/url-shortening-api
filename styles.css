@@ -375,7 +375,7 @@ footer .social-media-icons {
         display:flex;
         justify-content:end;
         align-items: center;
-        padding-left: 500px;
+        padding-left: 300px;
         gap: 20px;
     }
 
@@ -426,22 +426,56 @@ footer .social-media-icons {
 
     .header-text-section button {
         margin-left: -65%;
-    
     }
 
     .main-image {
-        margin-left: 66%;
+        margin-left: 50%;
         margin-top: 7%;
         width: 45%;
         height:20%;
     }
+    
+    .link-input-section {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: left;
+
+        margin-left: 150px;
+        width: 60%;
+        padding-top: 50px;
+        padding-left: 60px;
+
+        background-image: url(images/bg-boost-desktop.svg);
+        background-repeat: no-repeat;
+        background-position: top -58px right -50px;
+    }
+    
+    .link-input-section input[type="text"] {
+        padding: 5px 20px;
+        font-size: 17px;
+    }
+
+    .link-input-section input[type="submit"] {
+        font-size: 17px;
+    }
+
+    .link-input-section input {
+        width: 64%;
+    }
+
+    .link-input-section input[type="submit"] {
+        width: 22%;
+        height: 65px;
+    }
 
     .links {
         margin-top: 90px;
-        margin-right: 130px;
+        width: 73%;
         margin-left: 130px;
     }
-    
+
     .link-container {
         font-size: 25px;
         height: 50px;
@@ -465,45 +499,11 @@ footer .social-media-icons {
     .copy-button {
         width: 10%;
         font-size: 18px;
-    }
-
-    .link-input-section input[type="text"] {
-        padding: 5px 20px;
-        font-size: 17px;
-    }
-
-    .link-input-section input[type="submit"] {
-        font-size: 17px;
-    }
-
-    .link-input-section {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        align-items: left;
-
-        margin-left: 150px;
-        margin-right: 150px;
-        padding-top: 50px;
-        padding-left: 60px;
-
-        background-image: url(images/bg-boost-desktop.svg);
-        background-repeat: no-repeat;
-        background-position: top -58px right -50px;
-    }
-
-    .link-input-section input {
-        width: 64%;
-    }
-
-    .link-input-section input[type="submit"] {
-        width: 22%;
-        height: 65px;
-    }
-
-    .copy-button {
         padding: 10px 20px;
+    }
+
+    .advanced-statistics {
+        width: 88%;
     }
 
     .advanced-statistics h1 {
@@ -522,6 +522,7 @@ footer .social-media-icons {
     }
 
     .three-boxes {
+        width: 88%;
         display: flex;
         justify-content: space-between;
         position: relative;
@@ -570,6 +571,7 @@ footer .social-media-icons {
     }
 
     .boost-your-links {
+        width: 88%;
         height:200px;
         background-image: url(images/bg-boost-desktop.svg);
         background-repeat: no-repeat;
@@ -579,6 +581,7 @@ footer .social-media-icons {
     }
 
     footer {
+        width: 78%;
         margin-top: -5px;
         padding: 10px 85px 90px 85px;
         display: flex;
