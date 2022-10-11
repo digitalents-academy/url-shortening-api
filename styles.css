@@ -371,6 +371,9 @@ footer .social-media-icons {
         font-size:19px;
         align-items: center;
     }
+    .nav-bar h3:hover,  .nav-bar h4:hover {
+      color:black;
+    }
 
     .sign-up {
         display:flex;
@@ -482,7 +485,7 @@ footer .social-media-icons {
     text-align: center;
   }
   .circle {
-    margin-left: -250px;
+    margin-right: 73%;
   }
 
   .three-boxes {
@@ -503,24 +506,35 @@ footer .social-media-icons {
   .box1 {
     position: relative;
     width: 40%;
+    gap: 20px;
   }
 
   .box2 {
     position: relative;
     top: 30px;
     width: 40%;
+    gap: 20px;
   }
 
-  hr {
+  .box2 hr {
     position: absolute;
-    width: 150%;
+    width: 180%;
     height: 10px;
-    left: -107%;
-    top: 80%;
+    left: -29%;
+    top: 90%;
     z-index: -1;
     
   }
+  .box3 {
+    position: relative;
+    top: 60px;
+    width: 40%;
+    gap: 20px;
+  }
 
+  .box3 hr{
+    display:none;
+  }
  
   footer {
     margin-top: -5px;
