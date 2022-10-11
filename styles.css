@@ -474,10 +474,11 @@ footer .social-media-icons {
         margin-top: 90px;
         width: 73%;
         margin-left: 130px;
+        gap: 0;
     }
 
     .link-container {
-        font-size: 25px;
+        font-size: 20px;
         height: 50px;
         display: flex;
         justify-content: flex-end;
@@ -498,8 +499,8 @@ footer .social-media-icons {
 
     .copy-button {
         width: 10%;
-        font-size: 18px;
-        padding: 10px 20px;
+        font-size: 15px;
+        padding: 10px 10px;
     }
 
     .advanced-statistics {
@@ -522,7 +523,7 @@ footer .social-media-icons {
     }
 
     .three-boxes {
-        width: 88%;
+        width: 93.7%;
         display: flex;
         justify-content: space-between;
         position: relative;
@@ -571,7 +572,7 @@ footer .social-media-icons {
     }
 
     .boost-your-links {
-        width: 88%;
+        width: 93.7%;
         height:200px;
         background-image: url(images/bg-boost-desktop.svg);
         background-repeat: no-repeat;
@@ -581,7 +582,7 @@ footer .social-media-icons {
     }
 
     footer {
-        width: 78%;
+        width: 80%;
         margin-top: -5px;
         padding: 10px 85px 90px 85px;
         display: flex;
@@ -596,7 +597,7 @@ footer .social-media-icons {
     }
 
     footer h1 {
-        margin-right: 410px;
+        margin-right: 220px;
         margin-top: -80px;
     }
 
@@ -615,7 +616,6 @@ footer .social-media-icons {
     footer .social-media-icons {
         margin-top: -62px;
         gap: 25px;
-
     }
 
     footer p:hover, .social-media-icons:hover,  footer h3:hover {
