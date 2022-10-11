@@ -1,11 +1,19 @@
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
 
+/* Mobile only 375px */
+@media only screen and (max-width: 900px) {
+    .nav-bar {
+        display: none;
+    }
+}
+
 body {
     display: flex;
     flex-direction: column;
     text-align: center;
     margin: 0;
+    min-width: 375px;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
 }
@@ -29,9 +37,9 @@ body {
 }
 
 .nav-dropdown {
-    display:none;
+    display: none;
     border-radius: 10px;
-    background-color:hsl(257, 27%, 26%) ;
+    background-color: hsl(257, 27%, 26%) ;
     margin: 0 40px 0 40px ;
     padding: 20px 20px ;
     color:white;
@@ -39,7 +47,7 @@ body {
 }
 
 .nav-dropdown h2 {
-    height:0.15px;
+    height: 0.15px;
     margin: 0 5px 0 5px;
     background-color: hsl(0, 0%, 75%);
 }
@@ -92,16 +100,17 @@ body {
 .header-text-section button {
     margin-top: 25px;
     margin-bottom: 45px;
-    background-color: hsl(180, 66%, 49%); 
+    background-color: hsl(180, 66%, 49%);
     border: none;
     color: white;
     border-radius: 25px;
     padding: 16px 23px 13px;
     text-decoration: none;
-    font-family: 'Poppins', sans-serif;
     font-size: 16px;
-    font-weight: 600;
-}
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
 
 .link-input-section {
     padding: 20px;
@@ -146,7 +155,6 @@ body {
     color: var(--c, hsl(0, 0%, 75%));
 }
 
-/* "Please add a link" error message */
 .link-input-section p {
     margin: -5px 0;
     color: hsl(0, 87%, 67%);
@@ -218,7 +226,7 @@ body {
     color:black;
 }
 
-.three-boxes p{
+.three-boxes p {
     color:hsl(0, 0%, 75%);
 }
 
@@ -304,15 +312,6 @@ footer .social-media-icons {
     gap: 25px;
 }
 
-/* Mobile only 375px */
-@media only screen and (max-width: 900px) {
-
-    .nav-bar {
-        display: none;
-    }
-
-}
-
 /* Desktop version 1440px */
 @media only screen and (min-width: 900px) {
 
@@ -353,11 +352,15 @@ footer .social-media-icons {
         align-items: center;
     }
 
+    .nav-bar h3:hover, .nav-bar h4:hover {
+        color:black;
+    }
+
     .sign-up {
         display:flex;
         justify-content:end;
         align-items: center;
-        padding-left: 621px;
+        padding-left: 500px;
         gap: 20px;
     }
 
@@ -373,6 +376,10 @@ footer .social-media-icons {
         height:60px;
         text-transform: uppercase;
         cursor: pointer;
+    }
+
+    button:hover {
+        opacity: 50%;
     }
 
     .nav-bar h3 {
@@ -404,6 +411,7 @@ footer .social-media-icons {
 
     .header-text-section button {
         margin-left: -65%;
+    
     }
 
     .main-image {
@@ -429,10 +437,16 @@ footer .social-media-icons {
 
     .link-input-section {
         display: flex;
-        flex-direction: row;
-        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: left;
+
         margin-left: 150px;
         margin-right: 150px;
+        padding-top: 50px;
+        padding-left: 60px;
+
         background-image: url(images/bg-boost-desktop.svg);
         background-repeat: no-repeat;
         background-position: top -58px right -50px;
@@ -443,39 +457,12 @@ footer .social-media-icons {
     }
 
     .link-input-section input[type="submit"] {
-        padding: 8px 20px;
         width: 22%;
-        height: 60px;
-    }
-
-    .links {
-        margin-top: 90px;
-        margin-right: 130px;
-        margin-left: 130px;
-        font-size: 25px;
-    }
-
-    .link-container {
-        height: 50px;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .links .long-link {
-        border: none;
-        padding: 0;
-        margin-right: auto;
-    }
-
-    .links .short-link {
-        padding: 0;
+        height: 65px;
     }
 
     .copy-button {
-        width: 10%;
-        font-size: 18px;
+        padding: 10px 20px;
     }
 
     .advanced-statistics h1 {
@@ -490,7 +477,7 @@ footer .social-media-icons {
     }
 
     .circle {
-        margin-left: -250px;
+        margin-right: 73%;
     }
 
     .three-boxes {
@@ -511,29 +498,36 @@ footer .social-media-icons {
     .box1 {
         position: relative;
         width: 40%;
+        gap: 20px;
     }
 
     .box2 {
         position: relative;
         top: 30px;
         width: 40%;
+        gap: 20px;
+    }
+
+    .box2 hr {
+        position: absolute;
+        width: 180%;
+        height: 10px;
+        left: -29%;
+        top: 90%;
+        z-index: -1;
     }
 
     .box3 {
         position: relative;
         top: 60px;
         width: 40%;
+        gap: 20px;
     }
 
-    hr {
-        position: absolute;
-        width: 150%;
-        height: 10px;
-        left: -107%;
-        top: 80%;
-        z-index: -1;
+    .box3 hr {
+        display:none;
     }
-    
+
     .boost-your-links {
         height:200px;
         background-image: url(images/bg-boost-desktop.svg);
@@ -542,7 +536,7 @@ footer .social-media-icons {
         background-position: top -10px right -210px;
         overflow-y: visible;
     }
-    
+
     footer {
         margin-top: -5px;
         padding: 10px 85px 90px 85px;
@@ -574,6 +568,16 @@ footer .social-media-icons {
         text-align: left;
     }
 
+    footer .social-media-icons {
+        margin-top: -62px;
+        gap: 25px;
+
+    }
+
+    footer p:hover, .social-media-icons:hover,  footer h3:hover {
+        color:hsl(180, 66%, 49%);
+    }
+  
     footer .social-media-icons {
         margin-top: -62px;
         gap: 25px;
